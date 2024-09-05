@@ -6,9 +6,9 @@ export const AuthContext = createContext();
 const AuthContextProvider = ({ children }) => {
 	const [loggedIn, setLoggedIn] = useState({});
 
-	const getLoggedIn = async () => {
+	const getLoggedIn =  () => {
 		try {
-			const res = await axios.get("/users/logged");
+			const res =  axios.get("/users/logged");
 			setLoggedIn({ state: res.data.state, role: res.data.role });
 		} catch (err) {
 			console.error(err.message);

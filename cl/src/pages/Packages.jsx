@@ -93,7 +93,7 @@ const Packages = () => {
 					{isSearchEmpty && (
 						<div className="w-full flex justify-center flex-col items-center">
 							<h1 className="text-2xl font-bold pb-10 text-center text-gray-500">
-								No Packages Found
+								200 prive
 							</h1>
 							<button
 								className="font-semibold text-lg bg-light-blue text-white py-2 rounded-full flex justify-center items-center w-40"

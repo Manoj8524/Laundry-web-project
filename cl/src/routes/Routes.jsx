@@ -32,6 +32,7 @@ import UserProfileDelete from "../pages/UserProfileDelete";
 import UserProfileEditDelete from "../pages/UserProfileEditDelete";
 import ViewOrder from "../pages/ViewOrder";
 import Worker from "../pages/Worker";
+import Prices from "../pages/Prices";
 
 const AppRoutes = () => {
 	const { loggedIn } = useContext(AuthContext);
@@ -73,7 +74,7 @@ const AppRoutes = () => {
 			<Packages />
 		  </>
 		) : (
-		  <Navigate to="/" />
+		  <Navigate to="/users/logout" />
 		)} />
   
 		<Route path="/auth/moderator/login" element={<ModeratorLogin />} />
@@ -127,7 +128,10 @@ const AppRoutes = () => {
 			<CreateBlog />
 		  </>
 		} />
-		
+		<Route path="/prices" element={  <>
+			<Navbar />
+			<Prices />
+		  </>} />
 		<Route path="/auth/user/blogs" element={<Blog />} />
 		
 		<Route path="/singleblog/:id" element={<SingleBlog />} />

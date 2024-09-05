@@ -6,7 +6,7 @@ import { CartContext } from "../../contexts/CartContext";
 import LogoBlue from "../../assets/images/logo-blue.png";
 import { navLinks, customerLoggedNavLinks } from "../../helpers/navbarLinks";
 import SignoutConfirmModal from "../modals/SignoutConfirmModal";
-import { Menu, X } from "react-feather"; // Icons for menu and close button
+import { Menu, X } from "react-feather";
 import "./N.css";
 
 const Navbar = () => {
