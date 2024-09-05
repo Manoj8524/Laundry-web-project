@@ -71,11 +71,11 @@ const Navbar = () => {
                         </button>
                     ) : (
                         <Link
-                            className="ml-5 font-semibold text-lg bg-[#11B4F5] text-white py-3 px-8 rounded-full block mx-4 my-2"
-                            to="/auth/login"
-                        >
-                            Sign In
-                        </Link>
+                        className="ml-5 font-semibold text-lg bg-[#11B4F5] text-white py-1.5 px-8 rounded-full block mx-4 my-1"
+                        to="/auth/login"
+                    >
+                        Sign In
+                    </Link>
                     )}
                 </nav>
             </div>
