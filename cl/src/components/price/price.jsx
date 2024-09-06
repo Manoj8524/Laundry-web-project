@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import bg from "../../assets/images/bg1.png"
 // Mock data for products
 const productsData = [
   { name: 'General cleaning', price: 5500,add: false, dayPrice: false },
@@ -13,8 +14,8 @@ const productsData = [
 
 // Input component for stay days
 const Input = ({ value, onChange }) => (
-<div className="flex items-center mt-8 mb-8"> 
-  <label className="text-lg mx-2" htmlFor="days">Stay time:</label>
+<div className="flex flex-col md:flex-row items-center justify-center mt-8 mb-8 space-y-4 md:space-y-0 md:space-x-4">
+  <label className="text-base md:text-lg mx-2" htmlFor="days">Stay time:</label>
   <input
     style={{
       appearance: 'textfield', // General appearance removal
@@ -22,14 +23,14 @@ const Input = ({ value, onChange }) => (
       WebkitAppearance: 'none', // Chrome, Safari, Edge, Opera
       margin: 0,
     }}
-    className="border-2 border-indigo-400 font-semibold text-indigo-800 p-2 text-center text-sm rounded-lg"
+    className="border-2 border-indigo-400 font-semibold text-indigo-800 p-2 text-center text-sm rounded-lg w-full md:w-auto"
     type="number"
     max="90"
     value={value}
     onChange={onChange}
     id="days"
   />
-  <label className="text-lg mx-2" htmlFor="days">Days</label>
+  <label className="text-base md:text-lg mx-2" htmlFor="days">Days</label>
 </div>
 
 );
@@ -75,7 +76,7 @@ const Price = () => {
         <div className="mr-8 mb-4">
           <img
             className="transform scale-x-[-1]"
-            src="https://github.com/OlgaKoplik/CodePen/blob/master/bg1.png?raw=true"
+            src={bg}
             alt="service"
           />
           <Input

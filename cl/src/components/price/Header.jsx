@@ -14,7 +14,7 @@ const Header = () => {
         <div className="absolute inset-0 bg-[#11B4F5] opacity-50"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4">
+      <div className="relative z-1 container mx-auto px-4">
         <h1 className="text-4xl font-bold">The Big Laundry Services</h1>
         <p className="text-lg">Clean your worries away, one load at a time.</p>
       </div>
