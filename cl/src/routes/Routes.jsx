@@ -33,6 +33,9 @@ import UserProfileEditDelete from "../pages/UserProfileEditDelete";
 import ViewOrder from "../pages/ViewOrder";
 import Worker from "../pages/Worker";
 import Prices from "../pages/Prices";
+import DryCleaningPage from "../components/price/price book"
+import About from "../pages/aboutas"
+import Footer from "../components/footer/Footer";
 
 const AppRoutes = () => {
 	const { loggedIn } = useContext(AuthContext);
@@ -132,6 +135,14 @@ const AppRoutes = () => {
 			<Navbar />
 			<Prices />
 		  </>} />
+		  <Route path="/dry-cleaning" element={<DryCleaningPage />} />
+
+		  <Route path="/aboutas" element={ <>
+			<Navbar />
+			<About />
+			<Footer/>
+		  </>} />
+
 		<Route path="/auth/user/blogs" element={<Blog />} />
 		
 		<Route path="/singleblog/:id" element={<SingleBlog />} />

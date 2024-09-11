@@ -2,7 +2,7 @@ const navLinks = [
 	{ name: "Home", path: "/" },
 	{ name: "Pricing", path: "/prices" },
 	{ name: "Blogs", path: "/blogs" },
-	{ name: "About us", path: "/about" },
+	{ name: "About us", path: "/aboutas" },
 ];
 
 const customerLoggedNavLinks = [

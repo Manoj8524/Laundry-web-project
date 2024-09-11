@@ -1,5 +1,6 @@
 import React from 'react';
 import Price from "./price";
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 // Import the images for the services
 import SpecialLaundryImage from '../../assets/gif/wash m.gif';
@@ -25,6 +26,12 @@ const services = [
 ];
 
 const LaundryMain = () => {
+
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleButtonClick = (route) => {
+    navigate(route); // Navigate to the service route
+  };
   return (
     <main className="container mx-auto max-w-8xl px-4 py-6 mt-8 flex flex-col lg:flex-row"> 
       {/* Added mt-8 for top margin of the main container */}
@@ -35,7 +42,10 @@ const LaundryMain = () => {
             <h2 className="text-xl font-semibold mb-2">{service.name}</h2>
             <p className="text-gray-600 mb-4">₹{service.price} / 5 kg load</p>
             <p className="text-sm text-gray-500 mb-4">{service.duration}</p>
-            <button className="w-full bg-[#11B4F5] text-white py-2 rounded-md hover:bg-[#0FA4E2] transition-colors">
+            <button
+            onClick={() => handleButtonClick('/dry-cleaning')} // Call handleButtonClick on click
+              className="w-full bg-[#11B4F5] text-white py-2 rounded-md hover:bg-[#0FA4E2] transition-colors"
+            >
               Choose Package
             </button>
           </div>
