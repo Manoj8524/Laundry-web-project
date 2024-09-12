@@ -36,6 +36,7 @@ import Prices from "../pages/Prices";
 import DryCleaningPage from "../components/price/price book"
 import About from "../pages/aboutas"
 import Footer from "../components/footer/Footer";
+import Contact from "../components/contact support/contact";
 
 const AppRoutes = () => {
 	const { loggedIn } = useContext(AuthContext);
@@ -142,7 +143,9 @@ const AppRoutes = () => {
 			<About />
 			<Footer/>
 		  </>} />
+		  Contact
 
+		  <Route path="/contact" element={< Contact />} />
 		<Route path="/auth/user/blogs" element={<Blog />} />
 		
 		<Route path="/singleblog/:id" element={<SingleBlog />} />

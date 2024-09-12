@@ -1,79 +1,91 @@
-import { MailIcon, PhoneIcon } from "lucide-react";
+import React from 'react';
+import { FaGlobe, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaGooglePlusG, FaDribbble, FaPinterestP } from 'react-icons/fa';
 
-export default function Contact() {
+const ContactPageSection = () => {
   return (
-    <div className="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-6">
-      <div className="mb-6">
-        <h2 className="text-2xl font-semibold">Contact Support</h2>
-        <p className="text-gray-600">Get in touch with our support team. We're here to help!</p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div className="flex items-center space-x-2">
-          <MailIcon className="w-5 h-5 text-gray-500" />
-          <span>support@example.com</span>
+    <section className="contact-page-section py-28">
+      <div className="container mx-auto">
+        <div className="sec-title text-center pb-10">
+          <div className="title text-[#11B4F5] text-lg font-bold mb-4">Contact Us</div>
+          <h2 className="text-gray-800 text-4xl font-bold">Let's Get in Touch.</h2>
         </div>
-        <div className="flex items-center space-x-2">
-          <PhoneIcon className="w-5 h-5 text-gray-500" />
-          <span>+1 (555) 123-4567</span>
-        </div>
-      </div>
-      <form className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Enter your name"
-              className="block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-            />
+
+        <div className="inner-container bg-[#11B4F5] p-10 shadow-lg rounded-lg relative z-10">
+          <div className="row flex flex-wrap -mx-4">
+            
+            {/* Form Column */}
+            <div className="form-column w-full md:w-2/3 px-4">
+              <div className="inner-column bg-white p-10 rounded-lg">
+                {/* Contact Form */}
+                <div className="contact-form">
+                  <form method="post" action="sendemail.php" id="contact-form">
+                    <div className="flex flex-wrap -mx-2">
+                      <div className="form-group w-full md:w-1/2 px-2 mb-4">
+                        <input type="text" name="name" placeholder="Name" required 
+                          className="w-full h-14 p-4 border border-gray-300 focus:border-[#11B4F5] rounded" />
+                      </div>
+                      <div className="form-group w-full md:w-1/2 px-2 mb-4">
+                        <input type="email" name="email" placeholder="Email" required 
+                          className="w-full h-14 p-4 border border-gray-300 focus:border-[#11B4F5] rounded" />
+                      </div>
+                      <div className="form-group w-full md:w-1/2 px-2 mb-4">
+                        <input type="text" name="subject" placeholder="Subject" required 
+                          className="w-full h-14 p-4 border border-gray-300 focus:border-[#11B4F5] rounded" />
+                      </div>
+                      <div className="form-group w-full md:w-1/2 px-2 mb-4">
+                        <input type="text" name="phone" placeholder="Phone" required 
+                          className="w-full h-14 p-4 border border-gray-300 focus:border-[#11B4F5] rounded" />
+                      </div>
+                      <div className="form-group w-full px-2 mb-4">
+                        <textarea name="message" placeholder="Message" 
+                          className="w-full h-64 p-4 border border-gray-300 focus:border-[#11B4F5] rounded resize-none"></textarea>
+                      </div>
+                      <div className="form-group w-full px-2">
+                        <button type="submit" className="theme-btn bg-[#11B4F5] text-white py-4 px-10 rounded font-bold hover:bg-transparent hover:text-[#11B4F5] border-2 border-[#11B4F5] transition">
+                          Send Now
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                {/* End Contact Form */}
+              </div>
+            </div>
+            
+            {/* Info Column */}
+            <div className="info-column w-full md:w-1/3 px-4 mt-10 md:mt-0">
+              <div className="inner-column text-white p-10">
+                <h2 className="text-2xl font-bold mb-10">Contact Info</h2>
+                <ul className="list-info mb-10">
+                  <li className="mb-6 flex items-start">
+                    <FaGlobe className="h-6 w-6 text-white mr-4" />
+                    <span>123 lorem ispum Abc, Street Chandigarh.</span>
+                  </li>
+                  <li className="mb-6 flex items-start">
+                    <FaEnvelope className="h-6 w-6 text-white mr-4" />
+                    <span>example@test</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaPhone className="h-6 w-6 text-white mr-4" />
+                    <span>1-234-567-890 <br /> 1-234-567-890</span>
+                  </li>
+                </ul>
+                <ul className="social-icon-four flex items-center">
+                  <li className="follow font-bold text-2xl mr-6">Follow on:</li>
+                  <li><a href="#" className="text-white hover:text-gray-900 transition mr-4"><FaFacebookF className="h-6 w-6" /></a></li>
+                  <li><a href="#" className="text-white hover:text-gray-900 transition mr-4"><FaTwitter className="h-6 w-6" /></a></li>
+                  <li><a href="#" className="text-white hover:text-gray-900 transition mr-4"><FaGooglePlusG className="h-6 w-6" /></a></li>
+                  <li><a href="#" className="text-white hover:text-gray-900 transition mr-4"><FaDribbble className="h-6 w-6" /></a></li>
+                  <li><a href="#" className="text-white hover:text-gray-900 transition"><FaPinterestP className="h-6 w-6" /></a></li>
+                </ul>
+              </div>
+            </div>
+            
           </div>
-          <div className="space-y-2">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Enter your email"
-              className="block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-            />
-          </div>
         </div>
-        <div className="space-y-2">
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
-            Subject
-          </label>
-          <select
-            id="subject"
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-          >
-            <option>Select a subject</option>
-            <option value="general">General Inquiry</option>
-            <option value="technical">Technical Support</option>
-            <option value="billing">Billing Issue</option>
-            <option value="feedback">Feedback</option>
-          </select>
-        </div>
-        <div className="space-y-2">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-            Message
-          </label>
-          <textarea
-            id="message"
-            rows="4"
-            placeholder="Enter your message here"
-            className="block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-          />
-        </div>
-      </form>
-      <div className="mt-6">
-        <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700">
-          Submit
-        </button>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default ContactPageSection;
