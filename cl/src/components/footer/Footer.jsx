@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import { TiLocation } from "react-icons/ti";
 import { SiFacebook, SiInstagram, SiYoutube } from "react-icons/si"; // Removed SiTwitter
 import { IoMail } from "react-icons/io5";
@@ -11,6 +11,8 @@ import { IoIosCall } from "react-icons/io";
 import LogoWhite from "../../assets/images/logo-white.png";
 
 const Footer = () => {
+  const navigate = useNavigate(); 
+
   return (
     <footer className="bg-[#11B4F5] text-white pt-10">
       {/* New Footer Section */}
@@ -20,7 +22,9 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-2">Call Us Now</h3>
             <p className="text-sm">Our support team is available 24/7</p>
           </div>
-          <button className="bg-white text-[#0A94D4] px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition-colors">
+          <button 
+          onClick={() => navigate("/contact")}
+          className="bg-white text-[#0A94D4] px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition-colors">
             Contact Support
           </button>
         </div>
